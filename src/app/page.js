@@ -1,43 +1,47 @@
+import Link from 'next/link';
+import {LinkPersonalizado} from "@/app/components/LinkPersonalizado";
+
 export default function Page() {
   return (
-    <div className="relative bg-white">
-      <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
-        <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
+    <div className="relative bg-white h-screen">
+      <div
+        className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
+        <div
+          className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <img
               alt="Coffee Co."
-              src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-11"
+              src="https://cdn.midjourney.com/ebaf3f94-7000-4779-86cf-f27172726711/0_0.png"
+              className="size-20 rounded-2xl"
             />
             <div className="hidden sm:mt-32 sm:flex lg:mt-16">
-              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+              <div
+                className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 Desfrute de uma experiência única em nossa cafeteria.{' '}
-                <a href="/sobre" className="whitespace-nowrap font-semibold text-indigo-600">
-                  <span className="absolute inset-0" />
-                  Sobre <span>&rarr;</span>
-                </a>
+                <LinkPersonalizado href={"/sobre"}>Sobre</LinkPersonalizado>
               </div>
             </div>
-            <h1 className="mt-24 text-4xl font-bold tracking-tight text-gray-900 sm:mt-10 sm:text-6xl">
+            <h1
+              className="mt-24 text-4xl font-bold tracking-tight text-gray-900 sm:mt-10 sm:text-6xl">
               Coffee Co.
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Saboreie nossos cafés especiais e sinta o aroma que encanta. Cada xícara é preparada com carinho e dedicação.
+              Saboreie nossos cafés especiais e sinta o aroma que encanta. Cada
+              xícara é preparada com carinho e dedicação.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <a
                 href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
               >
                 Peça agora
               </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                Saiba mais <span>→</span>
-              </a>
+              <LinkPersonalizado href={"/nossosCafes"}>Nossos Cafés</LinkPersonalizado>
             </div>
           </div>
         </div>
-        <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
+        <div
+          className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
           <img
             alt=""
             src="https://cdn.midjourney.com/01522bc3-f91b-4883-8644-6ca3fa2128f6/0_0.png"
