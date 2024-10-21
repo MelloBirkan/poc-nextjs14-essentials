@@ -3,7 +3,7 @@ import {LinkPersonalizado} from "@/app/components/LinkPersonalizado";
 
 export default function Page() {
   return (
-    <div className="relative bg-white h-screen">
+    <div className="relative bg-slate-200 h-screen">
       <div
         className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
         <div
@@ -30,12 +30,12 @@ export default function Page() {
               xícara é preparada com carinho e dedicação.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
-              <a
+              <Link
                 href="#"
                 className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
               >
                 Peça agora
-              </a>
+              </Link>
               <LinkPersonalizado href={"/nossosCafes"}>Nossos Cafés</LinkPersonalizado>
             </div>
           </div>

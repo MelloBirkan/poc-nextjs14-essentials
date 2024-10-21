@@ -1,3 +1,5 @@
+import Breadcrumbs from "@/app/components/Breadcrumbs";
+
 const stats = [
   { id: 1, name: 'Cafés vendidos diariamente', value: '500+' },
   { id: 2, name: 'Tipos de grãos especiais', value: '20+' },
@@ -8,6 +10,9 @@ const stats = [
 export default function Example() {
   return (
     <div className="bg-amber-900 py-24 sm:py-32 h-screen">
+      <Breadcrumbs paginas={[
+        { name: 'Nossos cafes', href: '/sobre', current: true },
+      ]}/>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="text-center">

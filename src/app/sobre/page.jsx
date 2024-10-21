@@ -2,7 +2,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 export default function Sobre() {
   return (
-    <div className="bg-white px-6 py-24 sm:py-32 lg:px-8 h-screen">
+    <div className="bg-slate-200 px-6 py-24 sm:py-32 lg:px-8 h-screen">
       <Breadcrumbs paginas={[
         { name: 'Sobre', href: '/sobre', current: true },
       ]}/>

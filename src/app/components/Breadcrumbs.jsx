@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Breadcrumbs({paginas}) {
 
   return (
-    <nav aria-label="Breadcrumb" className="flex">
+    <nav aria-label="Breadcrumb" className="flex px-5">
       <ol role="list" className="flex space-x-4 rounded-md bg-white px-6 shadow">
         <li className="flex">
           <div className="flex items-center">
