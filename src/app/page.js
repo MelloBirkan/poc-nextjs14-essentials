@@ -3,7 +3,7 @@ import Link from 'next/link';
 function CtaButton() {
   return <div className="mt-10 flex items-center gap-x-6">
     <Link
-      href="#"
+      href="produtos"
       className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
     >
       Peça agora
@@ -25,9 +25,9 @@ function VerticalImage() {
   return <div
     className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
     <img
-      alt=""
+      alt="Cafe"
       src="https://cdn.midjourney.com/01522bc3-f91b-4883-8644-6ca3fa2128f6/0_0.png"
-      className="aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
+      className="aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-screen"
     />
   </div>;
 }

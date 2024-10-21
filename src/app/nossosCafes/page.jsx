@@ -16,9 +16,9 @@ function InfoPanel(props) {
   </div>;
 }
 
-export default function Example() {
+export default function Page() {
   return (
-    <div className="bg-amber-900 py-24 sm:py-32 h-screen">
+    <div className="bg-amber-900 py-8 sm:py-10 h-screen">
       <Breadcrumbs paginas={[
         { name: 'Nossos cafes', href: '/sobre', current: true },
       ]}/>
