@@ -18,7 +18,7 @@ function InfoPanel(props) {
 
 export default function Page() {
   return (
-    <div className="bg-amber-900 py-8 sm:py-10 h-screen">
+    <div className="bg-amber-900 py-8 sm:py-10 h-full">
       <Breadcrumbs paginas={[
         { name: 'Nossos cafes', href: '/sobre', current: true },
       ]}/>

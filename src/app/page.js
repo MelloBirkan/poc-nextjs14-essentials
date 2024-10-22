@@ -27,7 +27,7 @@ function VerticalImage() {
     <img
       alt="Cafe"
       src="https://cdn.midjourney.com/01522bc3-f91b-4883-8644-6ca3fa2128f6/0_0.png"
-      className="aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-screen"
+      className=" w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-screen"
     />
   </div>;
 }
