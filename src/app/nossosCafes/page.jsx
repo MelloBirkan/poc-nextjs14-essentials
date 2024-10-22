@@ -16,7 +16,7 @@ function InfoPanel(props) {
   </div>;
 }
 
-export default function Page() {
+export default function NossosCafes() {
   return (
     <div className="bg-amber-900 py-8 sm:py-10 h-screen">
       <Breadcrumbs paginas={[

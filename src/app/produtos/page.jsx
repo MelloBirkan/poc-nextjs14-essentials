@@ -100,7 +100,7 @@ function ProductsList(props) {
   </div>;
 }
 
-export default function Page() {
+export default function Produtos() {
   return (
     <div className="bg-slate-200 h-max">
       <Breadcrumbs paginas={[

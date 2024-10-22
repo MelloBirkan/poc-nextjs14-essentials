@@ -1,6 +1,6 @@
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 
-export default function Page() {
+export default function Sobre() {
   return (
     <div className="bg-slate-200 px-6 py-8 sm:py-10 lg:px-8 h-screen">
       <Breadcrumbs paginas={[
