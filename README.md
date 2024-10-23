@@ -62,6 +62,8 @@ Este documento fornece um guia completo sobre como configurar e executar um proj
 #### Breadcrumbs Component
 O componente Breadcrumbs oferece navegação hierárquica intuitiva:
 
+![breadcrumb](images/breadcrumbs.png)
+
 ```jsx
 import { HomeIcon } from '@heroicons/react/20/solid'
 import Link from "next/link";
@@ -107,6 +109,8 @@ export default function Breadcrumbs({paginas}) {
 #### Links Personalizados
 Component para links estilizados consistentemente:
 
+![Nossos Cafés](images/produtos.png)
+
 ```jsx
 const LinkPersonalizado = ({children, href}) => {
   return (
@@ -140,6 +144,8 @@ const products = [
 #### Product Card Component
 Card individual para exibição de produto:
 
+![Nossos Cafés](images/card.png)
+
 ```jsx
 function ProductCard(props) {
   return (
@@ -166,6 +172,8 @@ function ProductCard(props) {
 #### Products List Component
 Lista de produtos com grid responsivo:
 
+![Nossos Cafés](images/cards.png)
+
 ```jsx
 function ProductsList(props) {
   return (
@@ -187,6 +195,8 @@ function ProductsList(props) {
 
 #### Call-to-Action Buttons
 Botões estilizados para ações principais:
+
+![Nossos Cafés](images/stats.png)
 
 ```jsx
 function CtaButton() {
