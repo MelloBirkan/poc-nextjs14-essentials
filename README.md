@@ -387,3 +387,207 @@ Para mais informações sobre como expandir o projeto ou adicionar novas funcion
 6. Implementar testes automatizados
 
 Para contribuir com o projeto, por favor leia nosso guia de contribuição e siga as diretrizes de código estabelecidas.
+
+
+
+-------------------------------------------------------------------------
+
+
+# Next.js 14 Mistérios Cósmicos - README
+
+Este projeto tem como objetivo demonstrar a criação e uso de componentes em React/Next, juntamente com a implementação de estilos utilizando CSS Modules.
+
+## Como criar um componente
+Criar um componente em `Next.js` é similar ao processo em React, mas seguindo a estrutura de diretórios de Next.js. Para começar, vamos criar um componente.
+
+Componentes são blocos reutilizáveis de código. Cada componente pode ser uma parte da sua página, como um botão, uma imagem ou uma caixa de texto. Eles ajudam você a organizar melhor o código e a tornar as coisas mais fáceis de entender e usar. Para criá-lo: 
+
+1. Crie uma pasta chamada components dentro do diretório src.
+2. Dentro da pasta, crie o arquivo no estilo “nomeDoArquivo.js"
+
+```jsx
+
+export default function Card2({ foto, titulo, descricao, alt }) {
+  return (
+    <div className={styles.Card2Container}>
+      <img  className={styles.imagem} src={foto} alt={alt} />
+
+      <div className={styles.textContainer}>
+        <h2 className={styles.h2Container}>{titulo}</h2>
+        <p className={styles.eu}>{descricao}</p>
+      </div>
+
+    </div>
+  );
+}
+
+```
+
+Aqui, definimos o componente `Card2`. Ele usa a função `Card2` para criar uma parte da interface do usuário.
+Os itens entre as chaves `({ foto, titulo, descricao, alt })` são propriedades (ou `props`) para criar um componente dinâmico, que você pode passar informações para o componente quando usá-lo. Isso permite que você reutilize esse componente em qualquer parte do projeto, passando diferentes valores.
+
+
+`<div className={styles.Card2Container}>: Esta é uma div que serve como contêiner principal para o card. O estilo da classe Card2Container é aplicado a ela.
+
+
+## CSS Module 
+
+CSS Modules é uma maneira de escrever estilos (CSS) que ajuda a manter a organização deles e evita conflitos.
+Quando você usa CSS Modules, cada classe que você define é única e não pode ser afetada por outras classes. Isso significa que, mesmo que você tenha duas classes com o mesmo nome em diferentes arquivos, elas não vão se misturar.
+
+Quando você cria um arquivo CSS para um componente, você o importa diretamente no seu componente, como mostrado anteriormente:
+ 
+```CSS
+import styles from "./Card2.module.css";
+
+export default function Card2({ foto, titulo, descricao, alt }) {
+  return ()
+}
+   
+```
+
+No trecho acima, a classe card é única para esse componente. Se você tiver outra classe card em um arquivo CSS diferente, ela não vai interferir nesta.
+
+
+Depois, no arquivo do css module, é só escrever o estilo da forma que desejar, como por exemplo:
+
+```CSS
+
+.Card2Container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  gap: 16px; 
+  background-color: rgb(222, 232, 240); 
+  border: 2px solid rgb(0, 0, 0); 
+  border-radius: 10px; 
+  padding: 20px; 
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2), 
+              0 4px 6px rgba(0, 0, 0, 0.1); 
+  color: black;
+  width: 80%;
+  margin: 20px; 
+}
+
+  .imagem {
+    width: 200px;
+    height: 200px; 
+    border-radius: 8px; 
+    object-fit: cover;
+  }
+  
+  .textContainer {
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .h2Container {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+  }
+  
+  .eu {
+    font-size: 16px;
+    font-family: 'Sorbian', sans-serif;
+    margin: 8px 0 0 0; 
+  }
+  
+   
+```
+
+Criando o card abaixo:
+
+![Imagem do Card](images/card2.png)
+
+
+## Diferença entre CSS Modules e CSS Global
+
+### CSS Global:
+- As classes são globais, o que significa que qualquer classe que você definir pode ser usada em qualquer lugar. Isso pode causar conflitos se você tiver duas classes com o mesmo nome em arquivos diferentes.
+- Pode ficar confuso à medida que sua aplicação cresce, já que todos os estilos estão misturados.
+- Se você mudar um estilo, precisa ter cuidado para não afetar outros lugares onde a classe é usada. 
+
+### CSS Modules:
+- As classes são locais ao componente. Cada classe tem um nome único, então você não precisa se preocupar com conflitos.
+- Ajuda a manter os estilos organizados, pois cada componente tem seu próprio arquivo CSS.
+- Você pode alterar um estilo em um componente sem se preocupar em quebrar outros componentes.
+
+
+
+## Estrutura da página principal 
+
+O arquivo page.js` é geralmente onde você define o que será exibido na sua página principa, onde você diz ao navegador o que deve ser mostrado para o usuário. Veja o exemplo:
+
+```CSS
+import styles from "./page.module.css";
+import Card1 from "./components/Card1";
+import Card2 from "./components/Card2";
+
+export default function Home() {
+  return (
+    <div className={styles.container}>
+
+    <Card1 
+      titulo= "💫   Mistérios Cósmicos   ☄️"  
+      descricao="O cosmos é um vasto oceano de mistérios esperando para ser desvendado. Desde as estrelas distantes até os planetas desconhecidos, cada canto do universo guarda segredos que desafiam nossa compreensão e acendem nossa curiosidade.
+      Com bilhões de galáxias espalhadas pelo espaço, cada uma repleta de estrelas, planetas e sistemas inteiros, o universo nos convida a explorar suas fronteiras. Há tanto ainda por descobrir: mundos alienígenas orbitando sóis distantes, buracos negros escondidos na escuridão, e até mesmo possibilidades de vida além da Terra." 
+      />
+    
+    <Card2
+      foto= "https://i0.wp.com/ecoosfera.com/wp-content/uploads/2022/11/OTXPHDWQRRAEXENIRBLHGREUV4.jpg?resize=750%2C375&ssl=1"
+      titulo= "O Misterioso Hexágono de Saturno"
+      descricao= "No topo do planeta Saturno, há uma estrutura que intriga cientistas há décadas: um gigantesco e perfeito hexágono formado por correntes de vento. Com mais de 30 mil quilômetros de diâmetro, esse fenômeno surpreende pela sua forma geométrica quase perfeita e pelas cores vibrantes que mudam ao longo das estações. Ninguém sabe exatamente como essa tempestade em forma de hexágono se formou, mas uma coisa é certa: é uma das maiores maravilhas do Sistema Solar. Será que esse padrão geométrico esconde segredos que ainda estão além da nossa compreensão?"
+    />
+
+  </div>  
+  );
+}
+
+```
+
+
+Aqui, estamos importando o componente Card2 na sequencia onde queremos que ele apareça na tela. Como usamos `props` no componente, é aqui que vamos colocar o conteúdo do card.
+
+Se quiser repetir o componente card, mas com outro conteúdo, basta somente acrescenta-lo novamente e adicionar outro conteúdo. Da seguinte forma:
+
+
+```CSS
+import styles from "./page.module.css";
+import Card1 from "./components/Card1";
+import Card2 from "./components/Card2";
+
+export default function Home() {
+  return (
+    <div className={styles.container}>
+
+    <Card1 
+      titulo= "💫   Mistérios Cósmicos   ☄️"  
+      descricao="O cosmos é um vasto oceano de mistérios esperando para ser desvendado. Desde as estrelas distantes até os planetas desconhecidos, cada canto do universo guarda segredos que desafiam nossa compreensão e acendem nossa curiosidade.
+      Com bilhões de galáxias espalhadas pelo espaço, cada uma repleta de estrelas, planetas e sistemas inteiros, o universo nos convida a explorar suas fronteiras. Há tanto ainda por descobrir: mundos alienígenas orbitando sóis distantes, buracos negros escondidos na escuridão, e até mesmo possibilidades de vida além da Terra." 
+      />
+    
+    <Card2
+      foto= "https://i0.wp.com/ecoosfera.com/wp-content/uploads/2022/11/OTXPHDWQRRAEXENIRBLHGREUV4.jpg?resize=750%2C375&ssl=1"
+      titulo= "O Misterioso Hexágono de Saturno"
+      descricao= "No topo do planeta Saturno, há uma estrutura que intriga cientistas há décadas: um gigantesco e perfeito hexágono formado por correntes de vento. Com mais de 30 mil quilômetros de diâmetro, esse fenômeno surpreende pela sua forma geométrica quase perfeita e pelas cores vibrantes que mudam ao longo das estações. Ninguém sabe exatamente como essa tempestade em forma de hexágono se formou, mas uma coisa é certa: é uma das maiores maravilhas do Sistema Solar. Será que esse padrão geométrico esconde segredos que ainda estão além da nossa compreensão?"
+    />
+
+    <Card2
+      foto="https://super.abril.com.br/wp-content/uploads/2016/12/galaxia.jpg?quality=70&w=1024&crop=1"
+      titulo= "O Enigma da Energia Escura e a Expansão Acelerada do Universo"    
+      descricao="A energia escura é uma das maiores incógnitas da cosmologia, composta por cerca de 68% do universo e responsável pela aceleração da sua expansão. Desde a década de 1990, observações de supernovas distantes mostraram que essa expansão não apenas continua, mas está acelerando, levando os cientistas a postularem a existência da energia escura.
+      Pesquisadores da colaboração DESI (Dark Energy Spectroscopic Instrument) estão usando um novo espectrógrafo para mapear a distribuição de galáxias e buscar pistas sobre a natureza da energia escura. A pergunta central é se ela é uma forma de energia ou uma propriedade fundamental do espaço-tempo. Novas descobertas podem revelar os segredos da energia escura e mudar nossa compreensão das leis da física e do futuro do universo."
+    />
+
+
+  </div>  
+  );
+}
+
+   
+```
+
+Formando assim, o projeto:
+
+![Imagem do site](images/site.png)
