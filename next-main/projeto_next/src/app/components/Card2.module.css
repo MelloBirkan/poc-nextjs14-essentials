@@ -1,0 +1,42 @@
+.Card2Container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  gap: 16px; 
+  background-color: rgb(222, 232, 240); 
+  border: 2px solid rgb(0, 0, 0); 
+  border-radius: 10px; 
+  padding: 20px; 
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2), 
+              0 4px 6px rgba(0, 0, 0, 0.1); 
+  color: black;
+  width: 80%;
+  margin: 20px; 
+}
+
+  
+  .imagem {
+    width: 200px;
+    height: 200px; 
+    border-radius: 8px; 
+    object-fit: cover;
+  }
+  
+  .textContainer {
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .h2Container {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+  }
+  
+  .eu {
+    font-size: 16px;
+    font-family: 'Sorbian', sans-serif;
+    margin: 8px 0 0 0; 
+  }
+  
+

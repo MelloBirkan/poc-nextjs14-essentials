@@ -1,0 +1,20 @@
+.Card1Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgb(4, 4, 38);
+  /* width: 100vw;  */
+  color: white;
+  padding: 40px 5px;
+
+}
+
+.textoContainer {
+  font-size: 18px;
+  font-family: 'Sorbian', sans-serif;
+  text-align: justify;
+  padding: 30px 80px;
+}

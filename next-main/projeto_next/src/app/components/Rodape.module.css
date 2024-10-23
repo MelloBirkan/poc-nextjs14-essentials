@@ -1,0 +1,20 @@
+
+.RodapeContainer {
+    display: flex;
+
+    justify-content: center;
+    background-color: rgb(4, 4, 38);
+    width: 100vw;  
+    padding: 10px 10px;
+}
+
+.rodapeTexto {
+    color: yellow;
+}
+
+:hover.rodapeTexto {
+    color: orange;
+}
+
+
+    
